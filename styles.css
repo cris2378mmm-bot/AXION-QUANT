@@ -2185,7 +2185,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   }
 }
 /* =========================================================
-   11. ACTUALIZACIÓN BRAND BOOK, GARANTÍAS Y BUYER PERSONAS
+   11. GARANTÍAS Y BRAND BOOK COMPLETO (16 PUNTOS)
 ========================================================= */
 
 /* Eslogan en Hero */
@@ -2262,44 +2262,108 @@ input[type="range"]::-webkit-slider-thumb:hover {
   line-height: 1.45;
 }
 
-/* Bloques de Brand Book */
-.brand-slogan-quote {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-  padding: 10px 18px;
+/* Índice rápido de los 16 puntos */
+.bb-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 44px;
+  padding: 16px;
   background: var(--bg-surface);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  border-radius: 99px;
-  font-size: 0.88rem;
-  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
 }
 
-.brand-slogan-quote i {
+.bb-index a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border-radius: 6px;
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.bb-index a span {
+  font-family: var(--font-mono);
+  font-weight: 700;
   color: var(--accent);
 }
 
-.brand-slogan-quote strong {
+.bb-index a:hover {
+  border-color: var(--accent);
   color: var(--text-primary);
+  transform: translateY(-2px);
 }
 
+/* Bloques del Brand Book */
 .brand-block {
-  margin-bottom: 52px;
+  margin-bottom: 44px;
+  scroll-margin-top: 96px;
+}
+
+.brand-panel[id] {
+  scroll-margin-top: 96px;
 }
 
 .brand-block-title {
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  margin-bottom: 22px;
-  padding-bottom: 12px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* 01. Propósito, Misión y Visión */
+.bb-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.brand-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panel-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.panel-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.mini-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+/* 03. Propósito, Visión y Misión */
 .identity-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2310,7 +2374,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 26px;
+  padding: 24px;
   transition: var(--transition);
 }
 
@@ -2330,53 +2394,124 @@ input[type="range"]::-webkit-slider-thumb:hover {
   align-items: center;
   justify-content: center;
   font-size: 1.15rem;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .identity-card h4 {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  margin-bottom: 10px;
+  font-size: 1.12rem;
+  margin-bottom: 8px;
 }
 
 .identity-card p {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
 }
 
-/* 02. Arquetipos y Valores */
+/* 04. Valores */
+.values-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.value-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.value-chip:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.value-chip i {
+  color: var(--accent);
+  font-size: 1.15rem;
+}
+
+.value-chip strong {
+  display: block;
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+}
+
+.value-chip span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* 05 y 06. Personalidad, Voz y Arquetipos */
 .archetypes-values-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 
-.brand-panel {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 26px;
+.trait-pills {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.panel-subtitle {
+.trait-pills span {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--text-muted);
+  font-size: 0.74rem;
+  padding: 5px 11px;
+  border-radius: 99px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: var(--accent);
 }
 
-.panel-desc {
-  font-size: 0.86rem;
+.voice-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.voice-box {
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+
+.voice-box.do {
+  border-left: 3px solid var(--accent);
+}
+
+.voice-box.dont {
+  border-left: 3px solid var(--danger);
+}
+
+.voice-box strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+}
+
+.voice-box.do strong { color: var(--accent); }
+.voice-box.dont strong { color: var(--danger); }
+
+.voice-box p {
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.45;
 }
 
 .archetype-item {
-  padding: 16px;
+  padding: 15px;
   background: var(--bg-main);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -2387,8 +2522,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  margin-bottom: 8px;
-  font-size: 0.94rem;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
 }
 
 .archetype-pct {
@@ -2396,7 +2531,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   border-radius: 6px;
   background: rgba(16, 185, 129, 0.12);
   color: var(--accent);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
 }
 
@@ -2406,173 +2541,25 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 .archetype-item p {
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   color: var(--text-secondary);
 }
 
-.values-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.value-chip {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 12px 14px;
-  background: var(--bg-main);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-}
-
-.value-chip i {
-  color: var(--accent);
-  margin-top: 3px;
-  font-size: 1rem;
-  width: 20px;
-  text-align: center;
-}
-
-.value-chip strong {
-  display: block;
-  font-size: 0.88rem;
-  margin-bottom: 2px;
-}
-
-.value-chip span {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-}
-
-/* 03. Sistema Visual: Logo, Paleta y Tipografía */
-.brand-system-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.logo-preview-stage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 28px 18px;
-  border-radius: var(--radius-sm);
-  border: 1px dashed var(--border-strong);
-  background-color: var(--bg-main);
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-.logo-svg-lg {
-  width: 56px;
-  height: 56px;
-  flex-shrink: 0;
-}
-
-.palette-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.color-swatch {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px;
-  background: var(--bg-main);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-}
-
-.swatch-sample {
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-.swatch-info {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.3;
-}
-
-.swatch-name {
-  font-weight: 600;
-  font-size: 0.85rem;
-}
-
-.swatch-hex {
-  font-size: 0.74rem;
-  color: var(--accent);
-}
-
-.swatch-desc {
-  font-size: 0.74rem;
-  color: var(--text-muted);
-}
-
-.type-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.type-sample {
-  padding: 14px;
-  background: var(--bg-main);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-}
-
-.type-preview {
-  font-size: 1.05rem;
-  color: var(--text-primary);
-  margin-bottom: 4px;
-}
-
-.type-display {
-  font-family: var(--font-display);
-  font-weight: 700;
-}
-
-.type-body {
-  font-family: var(--font-body);
-  font-weight: 500;
-}
-
-.type-mono {
-  font-family: var(--font-mono);
-  font-size: 0.92rem;
-  color: var(--accent);
-}
-
-.type-meta {
-  font-size: 0.76rem;
-  color: var(--text-muted);
-}
-
-/* 04. Buyer Personas */
+/* 07. Buyer Personas */
 .personas-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 22px;
 }
 
 .persona-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 24px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   transition: var(--transition);
 }
 
@@ -2584,12 +2571,12 @@ input[type="range"]::-webkit-slider-thumb:hover {
 .persona-head {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .persona-icon {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
   background: rgba(16, 185, 129, 0.12);
   border: 1px solid rgba(16, 185, 129, 0.25);
@@ -2597,23 +2584,23 @@ input[type="range"]::-webkit-slider-thumb:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   flex-shrink: 0;
 }
 
 .persona-head h4 {
   font-family: var(--font-display);
-  font-size: 1.06rem;
+  font-size: 1.04rem;
 }
 
 .persona-role {
   display: block;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   color: var(--text-muted);
 }
 
 .persona-card p {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text-secondary);
   flex: 1;
 }
@@ -2626,35 +2613,335 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 .persona-tags span {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  padding: 4px 10px;
+  font-size: 0.68rem;
+  padding: 4px 9px;
   border-radius: 6px;
   background: var(--bg-main);
   border: 1px solid var(--border);
   color: var(--accent);
 }
 
-/* Responsive para nuevas secciones */
+/* 08. Propuesta de Valor Única */
+.uvp-banner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, var(--bg-surface) 60%);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: var(--radius-md);
+}
+
+.uvp-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: rgba(16, 185, 129, 0.16);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.uvp-content h4 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 6px 0 8px;
+}
+
+.uvp-content p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+/* 09, 10, 11. Sistema Visual */
+.brand-system-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.logo-preview-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-strong);
+  background-color: var(--bg-main);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.logo-svg-lg {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.usage-rules {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.palette-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.color-swatch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px;
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.swatch-sample {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.swatch-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.swatch-name { font-weight: 600; font-size: 0.83rem; }
+.swatch-hex { font-size: 0.72rem; color: var(--accent); }
+.swatch-desc { font-size: 0.72rem; color: var(--text-muted); }
+
+.type-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.type-sample {
+  padding: 13px;
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.type-preview { font-size: 1.02rem; margin-bottom: 4px; }
+.type-display { font-family: var(--font-display); font-weight: 700; }
+.type-body { font-family: var(--font-body); font-weight: 500; }
+.type-mono { font-family: var(--font-mono); font-size: 0.88rem; color: var(--accent); }
+.type-meta { font-size: 0.74rem; color: var(--text-muted); }
+
+/* 12 y 13. Listas de estilo gráfico y fotografía */
+.bb-bullet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bb-bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.bb-bullet-list li i {
+  margin-top: 4px;
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.bb-bullet-list li strong {
+  color: var(--text-primary);
+}
+
+/* 14. Aplicaciones de marca */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.app-mock-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.app-mock-card:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  transform: translateY(-3px);
+}
+
+.app-mock-card i {
+  font-size: 1.35rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.app-mock-card strong {
+  font-size: 0.92rem;
+}
+
+.app-mock-card span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* 15. Voz en Redes Sociales */
+.social-voice-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.social-voice-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sv-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.sv-head i {
+  color: var(--accent);
+  font-size: 1.15rem;
+}
+
+.social-voice-card p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.sv-freq {
+  font-size: 0.72rem;
+  color: var(--gold);
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+/* 16. Mensajes Clave */
+.key-messages-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.km-slogan {
+  padding: 24px;
+  background: var(--bg-main);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: var(--radius-sm);
+}
+
+.km-slogan h4 {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  line-height: 1.25;
+  margin-top: 10px;
+  color: var(--text-primary);
+}
+
+.km-claims {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.km-item {
+  padding: 12px 14px;
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.km-item span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.km-item p {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+.km-item p strong {
+  color: var(--text-primary);
+}
+
+/* Responsive Brand Book 16 puntos */
 @media (max-width: 1024px) {
-  .trust-strip-grid {
+  .trust-strip-grid,
+  .values-grid-4,
+  .apps-grid,
+  .social-voice-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .bb-two-col,
   .identity-grid,
   .archetypes-values-grid,
   .brand-system-grid,
-  .personas-grid {
+  .personas-grid,
+  .key-messages-box {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
-  .trust-strip-grid {
+  .trust-strip-grid,
+  .values-grid-4,
+  .apps-grid,
+  .social-voice-grid,
+  .voice-compare {
     grid-template-columns: 1fr;
   }
 
-  .brand-slogan-quote {
-    border-radius: var(--radius-sm);
-    text-align: left;
+  .uvp-banner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
