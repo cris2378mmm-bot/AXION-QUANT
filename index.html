@@ -21,9 +21,7 @@
 
   <!-- 1. TICKER DE MERCADOS EN VIVO -->
   <div class="market-ticker" aria-label="Cotizaciones de mercado">
-    <div class="ticker-track" id="ticker-track">
-      <!-- Renderizado dinámicamente por app.js -->
-    </div>
+    <div class="ticker-track" id="ticker-track"></div>
   </div>
 
   <!-- 2. BARRA DE NAVEGACIÓN -->
@@ -47,7 +45,7 @@
         <a href="#garantias">Garantías</a>
         <a href="#catalogo">Catálogo</a>
         <a href="#simulador">Simulador</a>
-        <a href="#marca">Brand Book</a>
+        <a href="#marca">Brand Book (16)</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
@@ -97,7 +95,7 @@
               Explorar Soluciones <i class="fa-solid fa-arrow-right"></i>
             </a>
             <a href="#marca" class="btn btn-outline">
-              <i class="fa-solid fa-book-open"></i> Ver Brand Book
+              <i class="fa-solid fa-book-open"></i> Ver Brand Book (16 Puntos)
             </a>
           </div>
 
@@ -143,7 +141,6 @@
               </div>
             </div>
 
-            <!-- Gráfica SVG decorativa de curva de capital -->
             <div class="terminal-chart-box">
               <svg viewBox="0 0 400 140" class="mini-equity-svg" preserveAspectRatio="none">
                 <defs>
@@ -191,12 +188,12 @@
             <div class="trust-badge-icon"><i class="fa-solid fa-certificate"></i></div>
             <div class="trust-badge-info">
               <strong>Backtesting Auditado</strong>
-              <span>Validación histórica de +10 años y estrés Monte Carlo.</span>
+              <span>Validación histórica de +10 años y pruebas Monte Carlo.</span>
             </div>
           </div>
 
           <div class="trust-badge-card">
-            <div class="trust-badge-icon gold-icon"><i class="fa-solid fa-shield-check fa-shield-halved"></i></div>
+            <div class="trust-badge-icon gold-icon"><i class="fa-solid fa-shield-halved"></i></div>
             <div class="trust-badge-info">
               <strong>Garantía 14 Días</strong>
               <span>Reembolso íntegro si el software no se adapta a tu plan.</span>
@@ -231,7 +228,6 @@
           <p>Licencias perpetuas, bots automatizados, formación técnica y acceso directo a nuestra mesa de análisis.</p>
         </div>
 
-        <!-- Barra de Filtros y Búsqueda -->
         <div class="catalog-controls">
           <div class="filter-tabs" id="filter-tabs">
             <button class="filter-btn active" data-category="all">Todos</button>
@@ -255,10 +251,7 @@
           </div>
         </div>
 
-        <!-- Grid de Productos -->
-        <div class="products-grid" id="products-grid">
-          <!-- Renderizado dinámicamente por app.js -->
-        </div>
+        <div class="products-grid" id="products-grid"></div>
 
         <div class="empty-state hidden" id="empty-state">
           <i class="fa-solid fa-radar"></i>
@@ -354,197 +347,171 @@
       </div>
     </section>
 
-    <!-- 6. IDENTIDAD DE MARCA, BRAND BOOK Y BUYER PERSONAS -->
+    <!-- 6. BRAND BOOK COMPLETO (16 PUNTOS ESTRATÉGICOS, VERBALES Y VISUALES) -->
     <section class="section brand-section" id="marca">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">BRAND BOOK & FUNDAMENTACIÓN ESTRATÉGICA</span>
+          <span class="section-tag">BRAND BOOK OFICIAL · 16 LINEAMIENTOS</span>
           <h2>Identidad y Arquitectura de <span class="accent">AXION QUANT</span></h2>
-          <p>Conoce los pilares estratégicos, el sistema visual y los perfiles de usuario que guían el diseño y operación de nuestra empresa.</p>
-          <div class="brand-slogan-quote">
-            <i class="fa-solid fa-quote-left"></i>
-            <span>Eslogan Oficial: <strong>Precisión estadística en mercados caóticos.</strong></span>
-          </div>
+          <p>Documentación integral de los 16 pilares estratégicos, verbales y visuales que guían la construcción de nuestra marca y plataforma digital.</p>
         </div>
 
-        <!-- 6.1 PROPÓSITO, MISIÓN Y VISIÓN -->
-        <div class="brand-block">
-          <h3 class="brand-block-title"><span class="mono-num accent">01 //</span> Propósito, Misión y Visión</h3>
+        <!-- Índice rápido de los 16 puntos -->
+        <nav class="bb-index" aria-label="Índice del Brand Book">
+          <a href="#bb-01"><span>01</span> Sobre el documento</a>
+          <a href="#bb-02"><span>02</span> Historia</a>
+          <a href="#bb-03"><span>03</span> Propósito, Visión y Misión</a>
+          <a href="#bb-04"><span>04</span> Valores</a>
+          <a href="#bb-05"><span>05</span> Personalidad y Voz</a>
+          <a href="#bb-06"><span>06</span> Arquetipos</a>
+          <a href="#bb-07"><span>07</span> Públicos Objetivo</a>
+          <a href="#bb-08"><span>08</span> Propuesta de Valor</a>
+          <a href="#bb-09"><span>09</span> Identidad Visual</a>
+          <a href="#bb-10"><span>10</span> Paleta de Colores</a>
+          <a href="#bb-11"><span>11</span> Tipografía</a>
+          <a href="#bb-12"><span>12</span> Estilo Gráfico</a>
+          <a href="#bb-13"><span>13</span> Fotografía</a>
+          <a href="#bb-14"><span>14</span> Aplicaciones</a>
+          <a href="#bb-15"><span>15</span> Voz en Redes</a>
+          <a href="#bb-16"><span>16</span> Mensajes Clave</a>
+        </nav>
+
+        <!-- 01 y 02: SOBRE ESTE DOCUMENTO & NUESTRA HISTORIA -->
+        <div class="bb-two-col">
+          <article class="brand-block brand-panel" id="bb-01">
+            <h3 class="brand-block-title"><span class="mono-num accent">01 //</span> Sobre este Documento</h3>
+            <p class="panel-desc">Este Brand Book integrado establece los criterios rectores de <strong>AXION QUANT</strong> en identidad estratégica, tono comunicativo y diseño de interfaz. Garantiza que cada punto de contacto —desde la terminal web y bots algorítmicos hasta reportes y redes sociales— proyecte coherencia institucional, seriedad técnica y confianza verificable.</p>
+            <div class="mini-meta-row">
+              <span><i class="fa-solid fa-layer-group accent"></i> Edición Web v4.3</span>
+              <span><i class="fa-solid fa-check-double accent"></i> Estándar de Consistencia</span>
+            </div>
+          </article>
+
+          <article class="brand-block brand-panel" id="bb-02">
+            <h3 class="brand-block-title"><span class="mono-num accent">02 //</span> Nuestra Historia</h3>
+            <p class="panel-desc"><strong>AXION QUANT</strong> nace en 2026 en León, Guanajuato, a partir de la intersección entre las ciencias actuariales, el cálculo estadístico y la programación financiera. Surgió como respuesta directa frente a una industria saturada de promesas falsas, con la convicción de trasladar herramientas de <em>backtesting</em> y gestión de riesgo institucional al inversionista independiente.</p>
+            <div class="mini-meta-row">
+              <span><i class="fa-solid fa-clock-rotate-left accent"></i> Fundada en 2026</span>
+              <span><i class="fa-solid fa-location-dot accent"></i> León, Gto. · Alcance Global</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- 03: PROPÓSITO, VISIÓN Y MISIÓN -->
+        <div class="brand-block" id="bb-03">
+          <h3 class="brand-block-title"><span class="mono-num accent">03 //</span> Propósito, Visión y Misión</h3>
           <div class="identity-grid">
             <article class="identity-card">
               <div class="identity-icon"><i class="fa-solid fa-compass"></i></div>
               <h4>Propósito</h4>
-              <p>Romper con el estereotipo especulativo del trading retail y democratizar la ingeniería financiera para que cualquier inversionista opere con método científico y no por emociones.</p>
-            </article>
-
-            <article class="identity-card">
-              <div class="identity-icon"><i class="fa-solid fa-bullseye"></i></div>
-              <h4>Misión</h4>
-              <p>Desarrollar software algorítmico auditado, herramientas cuantitativas y formación técnica de alto rigor que protejan el capital y otorguen ventaja estadística medible.</p>
+              <p>Transformar la forma en que los inversionistas independientes interactúan con los mercados financieros, sustituyendo la especulación emocional por método científico y disciplina matemática.</p>
             </article>
 
             <article class="identity-card">
               <div class="identity-icon"><i class="fa-solid fa-binoculars"></i></div>
               <h4>Visión</h4>
-              <p>Consolidarnos como la firma independiente referente en Latinoamérica en tecnología de análisis cuantitativo, reconocida por su transparencia y disciplina de riesgo.</p>
+              <p>Consolidarnos como la firma boutique de tecnología cuantitativa referente en Latinoamérica, reconocida por la transparencia de sus auditorías, la precisión de sus modelos y la protección de capital.</p>
+            </article>
+
+            <article class="identity-card">
+              <div class="identity-icon"><i class="fa-solid fa-bullseye"></i></div>
+              <h4>Misión</h4>
+              <p>Desarrollar algoritmos propietarios, indicadores sin repintado, simuladores de riesgo y formación financiera rigurosa que otorguen ventaja estadística medible en mercados reales.</p>
             </article>
           </div>
         </div>
 
-        <!-- 6.2 ARQUETIPOS DE MARCA Y VALORES -->
-        <div class="brand-block">
-          <h3 class="brand-block-title"><span class="mono-num accent">02 //</span> Arquetipos de Marca y Valores Corporativos</h3>
-          <div class="archetypes-values-grid">
-            <div class="brand-panel">
-              <div class="panel-subtitle">PERSONALIDAD DE MARCA</div>
-              <div class="archetype-item">
-                <div class="archetype-head">
-                  <strong><i class="fa-solid fa-brain accent"></i> El Sabio (Arquetipo Primario)</strong>
-                  <span class="archetype-pct mono-num">70%</span>
-                </div>
-                <p>Guía la voz analítica, objetiva y educativa de AXION QUANT. Sustituye promesas vacías por datos verificables, modelos matemáticos y pruebas de estrés.</p>
-              </div>
-
-              <div class="archetype-item">
-                <div class="archetype-head">
-                  <strong><i class="fa-solid fa-chess-king gold"></i> El Gobernante (Arquetipo Secundario)</strong>
-                  <span class="archetype-pct mono-num gold">30%</span>
-                </div>
-                <p>Aporta orden, control estricto del <em>drawdown</em>, protocolos de seguridad y una estética sobria propia de una mesa institucional.</p>
+        <!-- 04: VALORES DE MARCA -->
+        <div class="brand-block" id="bb-04">
+          <h3 class="brand-block-title"><span class="mono-num accent">04 //</span> Valores de Marca</h3>
+          <div class="values-grid-4">
+            <div class="value-chip">
+              <i class="fa-solid fa-square-root-variable"></i>
+              <div>
+                <strong>Rigor Matemático</strong>
+                <span>Validamos cada estrategia con +10 años de datos históricos y pruebas Monte Carlo.</span>
               </div>
             </div>
-
-            <div class="brand-panel">
-              <div class="panel-subtitle">VALORES QUE RIGEN LA EMPRESA</div>
-              <div class="values-list">
-                <div class="value-chip">
-                  <i class="fa-solid fa-square-root-variable"></i>
-                  <div>
-                    <strong>Rigor Matemático</strong>
-                    <span>Cada algoritmo se valida con 10+ años de backtesting y simulaciones Monte Carlo.</span>
-                  </div>
-                </div>
-                <div class="value-chip">
-                  <i class="fa-solid fa-eye"></i>
-                  <div>
-                    <strong>Transparencia Auditada</strong>
-                    <span>Mostramos resultados reales, incluyendo meses de drawdown y riesgo máximo.</span>
-                  </div>
-                </div>
-                <div class="value-chip">
-                  <i class="fa-solid fa-microchip"></i>
-                  <div>
-                    <strong>Ejecución Sin Sesgos</strong>
-                    <span>Sistematizamos alertas y reglas para eliminar el miedo y la codicia humana.</span>
-                  </div>
-                </div>
-                <div class="value-chip">
-                  <i class="fa-solid fa-shield-halved"></i>
-                  <div>
-                    <strong>Preservación de Capital</strong>
-                    <span>La gestión de riesgo estricta siempre tiene prioridad sobre la rentabilidad rápida.</span>
-                  </div>
-                </div>
+            <div class="value-chip">
+              <i class="fa-solid fa-eye"></i>
+              <div>
+                <strong>Transparencia Auditada</strong>
+                <span>Publicamos rendimientos y periodos de drawdown reales sin maquillar cifras.</span>
+              </div>
+            </div>
+            <div class="value-chip">
+              <i class="fa-solid fa-microchip"></i>
+              <div>
+                <strong>Ejecución Sin Sesgos</strong>
+                <span>Automatizamos reglas claras para neutralizar el miedo y la codicia humana.</span>
+              </div>
+            </div>
+            <div class="value-chip">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div>
+                <strong>Preservación de Capital</strong>
+                <span>El control estricto del riesgo siempre antecede a la búsqueda de rentabilidad.</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 6.3 GUÍA VISUAL DE BRANDING (LOGO, PALETA Y TIPOGRAFÍA) -->
-        <div class="brand-block">
-          <h3 class="brand-block-title"><span class="mono-num accent">03 //</span> Sistema Visual (Brand Book)</h3>
-          <div class="brand-system-grid">
-            <!-- Logotipo -->
-            <div class="brand-panel logo-showcase-box">
-              <div class="panel-subtitle">CONSTRUCCIÓN DEL LOGOTIPO</div>
-              <div class="logo-preview-stage">
-                <svg class="logo-svg-lg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <rect x="2" y="2" width="36" height="36" rx="8" stroke="#10B981" stroke-width="2" fill="#121622"/>
-                  <path d="M10 28L18.5 11L23 20.5L26.5 15.5L31 28" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M14 23H24" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
-                  <circle cx="31" cy="11" r="2.5" fill="#10B981"/>
-                </svg>
-                <div class="brand-text">
-                  <span class="brand-name" style="font-size: 1.65rem;">AXION<span class="accent">QUANT</span></span>
-                  <span class="brand-sub">ALGORITHMIC DESK</span>
-                </div>
-              </div>
-              <p class="panel-desc">Isotipo vectorial minimalista que integra una letra <strong>“A” angular</strong> con un pulso de tendencia alcista y un nodo de señal en verde esmeralda. Simboliza precisión algorítmica y crecimiento estructurado.</p>
+        <!-- 05 y 06: PERSONALIDAD/TONO DE VOZ & ARQUETIPOS -->
+        <div class="archetypes-values-grid brand-block">
+          <div class="brand-panel" id="bb-05">
+            <h3 class="brand-block-title" style="margin-bottom: 10px;"><span class="mono-num accent">05 //</span> Personalidad y Tono de Voz</h3>
+            <div class="trait-pills">
+              <span>Analítico</span>
+              <span>Preciso</span>
+              <span>Sobrio</span>
+              <span>Directo</span>
+              <span>Transparente</span>
             </div>
-
-            <!-- Paleta de colores -->
-            <div class="brand-panel">
-              <div class="panel-subtitle">PALETA CROMÁTICA INSTITUCIONAL</div>
-              <div class="palette-grid">
-                <div class="color-swatch">
-                  <div class="swatch-sample" style="background: #090A0F; border: 1px solid rgba(255,255,255,0.2);"></div>
-                  <div class="swatch-info">
-                    <span class="swatch-name">Obsidian Black</span>
-                    <span class="swatch-hex mono-num">#090A0F</span>
-                    <span class="swatch-desc">Fondo base · Enfoque y sobriedad</span>
-                  </div>
-                </div>
-                <div class="color-swatch">
-                  <div class="swatch-sample" style="background: #121622; border: 1px solid rgba(255,255,255,0.2);"></div>
-                  <div class="swatch-info">
-                    <span class="swatch-name">Slate Carbon</span>
-                    <span class="swatch-hex mono-num">#121622</span>
-                    <span class="swatch-desc">Tarjetas · Profundidad terminal</span>
-                  </div>
-                </div>
-                <div class="color-swatch">
-                  <div class="swatch-sample" style="background: #10B981;"></div>
-                  <div class="swatch-info">
-                    <span class="swatch-name">Emerald Signal</span>
-                    <span class="swatch-hex mono-num">#10B981</span>
-                    <span class="swatch-desc">Acento · Rendimiento y señales</span>
-                  </div>
-                </div>
-                <div class="color-swatch">
-                  <div class="swatch-sample" style="background: #F59E0B;"></div>
-                  <div class="swatch-info">
-                    <span class="swatch-name">Amber Gold</span>
-                    <span class="swatch-hex mono-num">#F59E0B</span>
-                    <span class="swatch-desc">Detalles · Nivel institucional</span>
-                  </div>
-                </div>
+            <div class="voice-compare">
+              <div class="voice-box do">
+                <strong><i class="fa-solid fa-check"></i> Sí decimos</strong>
+                <p>“Validado con Sharpe Ratio de 2.41 y drawdown controlado debajo del 4%.”</p>
+              </div>
+              <div class="voice-box dont">
+                <strong><i class="fa-solid fa-xmark"></i> No decimos</strong>
+                <p>“Duplica tu dinero garantizado esta semana sin riesgo y sin experiencia.”</p>
               </div>
             </div>
+          </div>
 
-            <!-- Jerarquía Tipográfica -->
-            <div class="brand-panel">
-              <div class="panel-subtitle">JERARQUÍA TIPOGRÁFICA</div>
-              <div class="type-list">
-                <div class="type-sample">
-                  <div class="type-preview type-display">Aa Space Grotesk</div>
-                  <div class="type-meta">Títulos y logotipo · Carácter geométrico y moderno</div>
-                </div>
-                <div class="type-sample">
-                  <div class="type-preview type-body">Aa Inter Regular / Medium</div>
-                  <div class="type-meta">Interfaz y descripciones · Alta legibilidad en pantalla</div>
-                </div>
-                <div class="type-sample">
-                  <div class="type-preview type-mono">0123456789 JetBrains Mono</div>
-                  <div class="type-meta">Precios, porcentajes y ticker · Cifras tabulares exactas</div>
-                </div>
+          <div class="brand-panel" id="bb-06">
+            <h3 class="brand-block-title" style="margin-bottom: 10px;"><span class="mono-num accent">06 //</span> Arquetipos de Marca</h3>
+            <div class="archetype-item">
+              <div class="archetype-head">
+                <strong><i class="fa-solid fa-brain accent"></i> El Sabio (Arquetipo Primario)</strong>
+                <span class="archetype-pct mono-num">70%</span>
               </div>
+              <p>Impulsa la búsqueda de verdad estadística, análisis técnico profundo y educación financiera basada en evidencia.</p>
+            </div>
+
+            <div class="archetype-item">
+              <div class="archetype-head">
+                <strong><i class="fa-solid fa-chess-king gold"></i> El Gobernante (Arquetipo Secundario)</strong>
+                <span class="archetype-pct mono-num gold">30%</span>
+              </div>
+              <p>Aporta estructura, disciplina de gestión de riesgo, estabilidad operativa y estética de terminal institucional.</p>
             </div>
           </div>
         </div>
 
-        <!-- 6.4 BUYER PERSONAS / PÚBLICO OBJETIVO -->
-        <div class="brand-block">
-          <h3 class="brand-block-title"><span class="mono-num accent">04 //</span> Público Objetivo (Buyer Personas)</h3>
+        <!-- 07: PÚBLICOS OBJETIVO -->
+        <div class="brand-block" id="bb-07">
+          <h3 class="brand-block-title"><span class="mono-num accent">07 //</span> Públicos Objetivo (Buyer Personas)</h3>
           <div class="personas-grid">
             <article class="persona-card">
               <div class="persona-head">
-                <div class="persona-icon"><i class="fa-solid fa-chart-candlestick fa-chart-line"></i></div>
+                <div class="persona-icon"><i class="fa-solid fa-chart-line"></i></div>
                 <div>
                   <h4>Trader Independiente</h4>
                   <span class="persona-role">22 – 38 años · Futuros, Forex y Acciones</span>
                 </div>
               </div>
-              <p>Busca eliminar el estrés emocional, estandarizar entradas con indicadores sin repintado y reducir su drawdown operativo.</p>
+              <p>Opera cuentas propias o fondeadas; busca indicadores sin repintado y reglas claras para reducir su drawdown emocional.</p>
               <div class="persona-tags">
                 <span>Indicadores TradingView</span>
                 <span>Live Desk</span>
@@ -559,7 +526,7 @@
                   <span class="persona-role">18 – 28 años · Actuaría, Finanzas e Ingeniería</span>
                 </div>
               </div>
-              <p>Cuenta con base matemática y busca frameworks en Python, modelos de riesgo y simuladores para validar estrategias reales.</p>
+              <p>Domina base matemática y busca frameworks en Python, simuladores de riesgo y modelos replicables para proyectos reales.</p>
               <div class="persona-tags">
                 <span>Python Framework</span>
                 <span>Simulador de Riesgo</span>
@@ -574,7 +541,7 @@
                   <span class="persona-role">30 – 55 años · Portafolios Mixtos</span>
                 </div>
               </div>
-              <p>Administra ahorro personal entre renta fija y acciones; requiere cobertura cambiaria, diversificación y mentoría estructurada.</p>
+              <p>Combina renta fija, ETFs y acciones; requiere cobertura cambiaria, balanceo de riesgo y mentoría cuantitativa 1 a 1.</p>
               <div class="persona-tags">
                 <span>Ingeniería de Portafolios</span>
                 <span>Mentoría 1:1</span>
@@ -583,9 +550,205 @@
           </div>
         </div>
 
-        <!-- 6.5 TESTIMONIOS -->
+        <!-- 08: PROPUESTA DE VALOR ÚNICA -->
+        <div class="brand-block" id="bb-08">
+          <h3 class="brand-block-title"><span class="mono-num accent">08 //</span> Propuesta de Valor Única (UVP)</h3>
+          <div class="uvp-banner">
+            <div class="uvp-icon"><i class="fa-solid fa-gem"></i></div>
+            <div class="uvp-content">
+              <span class="panel-subtitle">DIFERENCIADOR COMPETITIVO</span>
+              <h4>Tecnología de fondo cuantitativo, accesible para el inversionista independiente.</h4>
+              <p>A diferencia de academias tradicionales enfocadas en marketing aspiracional, <strong>AXION QUANT</strong> combina <strong>software algorítmico auditable</strong>, <strong>simuladores interactivos de riesgo</strong> y <strong>formación matemática aplicada</strong> bajo un modelo transparente de licencias y métricas verificables.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 09, 10 y 11: IDENTIDAD VISUAL, PALETA DE COLORES Y TIPOGRAFÍA -->
+        <div class="brand-system-grid brand-block">
+          <!-- 09: Identidad Visual -->
+          <div class="brand-panel" id="bb-09">
+            <h3 class="brand-block-title" style="margin-bottom: 8px;"><span class="mono-num accent">09 //</span> Identidad Visual</h3>
+            <div class="logo-preview-stage">
+              <svg class="logo-svg-lg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="2" y="2" width="36" height="36" rx="8" stroke="#10B981" stroke-width="2" fill="#121622"/>
+                <path d="M10 28L18.5 11L23 20.5L26.5 15.5L31 28" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 23H24" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="31" cy="11" r="2.5" fill="#10B981"/>
+              </svg>
+              <div class="brand-text">
+                <span class="brand-name" style="font-size: 1.5rem;">AXION<span class="accent">QUANT</span></span>
+                <span class="brand-sub">ALGORITHMIC DESK</span>
+              </div>
+            </div>
+            <p class="panel-desc">Isotipo vectorial SVG que fusiona una <strong>“A” angular</strong> con un pulso de tendencia alcista y un punto de señal en esmeralda.</p>
+            <div class="usage-rules">
+              <span><i class="fa-solid fa-check accent"></i> Mantener área de respeto mínima de 12px.</span>
+              <span><i class="fa-solid fa-xmark" style="color: var(--danger);"></i> No distorsionar proporción ni invertir colores.</span>
+            </div>
+          </div>
+
+          <!-- 10: Paleta de Colores -->
+          <div class="brand-panel" id="bb-10">
+            <h3 class="brand-block-title" style="margin-bottom: 8px;"><span class="mono-num accent">10 //</span> Paleta de Colores</h3>
+            <div class="palette-grid">
+              <div class="color-swatch">
+                <div class="swatch-sample" style="background: #090A0F; border: 1px solid rgba(255,255,255,0.2);"></div>
+                <div class="swatch-info">
+                  <span class="swatch-name">Obsidian Black (60%)</span>
+                  <span class="swatch-hex mono-num">#090A0F</span>
+                  <span class="swatch-desc">Fondo base · Enfoque y sobriedad</span>
+                </div>
+              </div>
+              <div class="color-swatch">
+                <div class="swatch-sample" style="background: #121622; border: 1px solid rgba(255,255,255,0.2);"></div>
+                <div class="swatch-info">
+                  <span class="swatch-name">Slate Carbon (25%)</span>
+                  <span class="swatch-hex mono-num">#121622</span>
+                  <span class="swatch-desc">Superficies y paneles cristal</span>
+                </div>
+              </div>
+              <div class="color-swatch">
+                <div class="swatch-sample" style="background: #10B981;"></div>
+                <div class="swatch-info">
+                  <span class="swatch-name">Emerald Signal (10%)</span>
+                  <span class="swatch-hex mono-num">#10B981</span>
+                  <span class="swatch-desc">Acento principal · Señal positiva</span>
+                </div>
+              </div>
+              <div class="color-swatch">
+                <div class="swatch-sample" style="background: #F59E0B;"></div>
+                <div class="swatch-info">
+                  <span class="swatch-name">Amber Gold (5%)</span>
+                  <span class="swatch-hex mono-num">#F59E0B</span>
+                  <span class="swatch-desc">Badges VIP · Riesgo y nivel pro</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11: Tipografía -->
+          <div class="brand-panel" id="bb-11">
+            <h3 class="brand-block-title" style="margin-bottom: 8px;"><span class="mono-num accent">11 //</span> Tipografía</h3>
+            <div class="type-list">
+              <div class="type-sample">
+                <div class="type-preview type-display">Aa Space Grotesk</div>
+                <div class="type-meta">Display / Títulos H1–H4 · Geometría tecnológica</div>
+              </div>
+              <div class="type-sample">
+                <div class="type-preview type-body">Aa Inter Regular &amp; Medium</div>
+                <div class="type-meta">Párrafos e interfaz UI · Máxima lectura digital</div>
+              </div>
+              <div class="type-sample">
+                <div class="type-preview type-mono">0123456789 JetBrains Mono</div>
+                <div class="type-meta">Precios, porcentajes y ticker · Cifras tabulares</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 y 13: ELEMENTOS GRÁFICOS & FOTOGRAFÍA E IMÁGENES -->
+        <div class="bb-two-col">
+          <article class="brand-block brand-panel" id="bb-12">
+            <h3 class="brand-block-title"><span class="mono-num accent">12 //</span> Elementos Gráficos y Estilo Visual</h3>
+            <ul class="bb-bullet-list">
+              <li><i class="fa-solid fa-border-all accent"></i> <strong>Estética Terminal Dark:</strong> Fondos oscuros con retículas de coordenadas sutiles y paneles con <em>glassmorphism</em>.</li>
+              <li><i class="fa-solid fa-wave-square accent"></i> <strong>Visualización de Datos:</strong> Curvas de capital vectoriales, gráficos Canvas interactivos y barras de ticker en tiempo real.</li>
+              <li><i class="fa-solid fa-icons accent"></i> <strong>Iconografía y Micro-interacciones:</strong> Iconos geométricos uniformes, bordes de 1px translúcidos e indicadores de estado en vivo.</li>
+            </ul>
+          </article>
+
+          <article class="brand-block brand-panel" id="bb-13">
+            <h3 class="brand-block-title"><span class="mono-num accent">13 //</span> Fotografía e Imágenes</h3>
+            <ul class="bb-bullet-list">
+              <li><i class="fa-solid fa-camera accent"></i> <strong>Dirección Fotográfica:</strong> Tomas de alto contraste y baja exposición enfocadas en monitores de mercados, código y estaciones de análisis reales.</li>
+              <li><i class="fa-solid fa-sliders accent"></i> <strong>Tratamiento Visual:</strong> Brillo controlado (85%) para integrarse sin destellos sobre el modo oscuro y reforzar la jerarquía de texto.</li>
+              <li><i class="fa-solid fa-ban" style="color: var(--danger);"></i> <strong>Prohibiciones:</strong> Se descartan fotos de stock clichés con billetes, autos exóticos o promesas de lujo irreal.</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- 14: APLICACIONES DE MARCA -->
+        <div class="brand-block" id="bb-14">
+          <h3 class="brand-block-title"><span class="mono-num accent">14 //</span> Aplicaciones de Marca</h3>
+          <div class="apps-grid">
+            <div class="app-mock-card">
+              <i class="fa-solid fa-laptop-code"></i>
+              <strong>Plataforma E-Commerce &amp; Simulador</strong>
+              <span>Sitio web corporativo en GitHub Pages con tienda, carrito y calculadora Canvas.</span>
+            </div>
+            <div class="app-mock-card">
+              <i class="fa-solid fa-chart-area"></i>
+              <strong>Interfaces TradingView &amp; MT5</strong>
+              <span>Paneles HUD integrados dentro de gráficos con la misma paleta esmeralda y ámbar.</span>
+            </div>
+            <div class="app-mock-card">
+              <i class="fa-solid fa-file-pdf"></i>
+              <strong>Reportes Macro y E-Books</strong>
+              <span>Manuales técnicos, hojas Black-Scholes y certificados digitales con sello AXION QUANT.</span>
+            </div>
+            <div class="app-mock-card">
+              <i class="fa-brands fa-discord"></i>
+              <strong>Comunidad Discord &amp; Recibos</strong>
+              <span>Canales de alertas verificadas y comprobantes digitales de licencia con ID único.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15: VOZ EN REDES SOCIALES -->
+        <div class="brand-block" id="bb-15">
+          <h3 class="brand-block-title"><span class="mono-num accent">15 //</span> Voz en Redes Sociales</h3>
+          <div class="social-voice-grid">
+            <div class="social-voice-card">
+              <div class="sv-head"><i class="fa-brands fa-x-twitter"></i> <strong>X (Twitter)</strong></div>
+              <p>Hilos breves de contexto macroeconómico, niveles clave pre-mercado y datos de volatilidad sin sensacionalismo.</p>
+              <span class="sv-freq mono-num">Diario · Sesión NY</span>
+            </div>
+            <div class="social-voice-card">
+              <div class="sv-head"><i class="fa-brands fa-youtube"></i> <strong>YouTube</strong></div>
+              <p>Auditorías de <em>backtesting</em> paso a paso, tutoriales de gestión de riesgo y análisis técnico cuantitativo.</p>
+              <span class="sv-freq mono-num">Semanal · Formato Largo</span>
+            </div>
+            <div class="social-voice-card">
+              <div class="sv-head"><i class="fa-brands fa-discord"></i> <strong>Discord Privado</strong></div>
+              <p>Mesa en vivo, seguimiento estructurado de operaciones, bitácoras compartidas y soporte técnico directo.</p>
+              <span class="sv-freq mono-num">En Vivo · Lun a Vie</span>
+            </div>
+            <div class="social-voice-card">
+              <div class="sv-head"><i class="fa-brands fa-github"></i> <strong>GitHub</strong></div>
+              <p>Documentación técnica limpia, scripts de validación en Python y control de versiones de la plataforma.</p>
+              <span class="sv-freq mono-num">Releases · Código Abierto</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16: MENSAJES CLAVE -->
+        <div class="brand-block" id="bb-16">
+          <h3 class="brand-block-title"><span class="mono-num accent">16 //</span> Mensajes Clave</h3>
+          <div class="key-messages-box">
+            <div class="km-slogan">
+              <span class="panel-subtitle">ESLOGAN OFICIAL</span>
+              <h4>“Precisión estadística en mercados caóticos.”</h4>
+            </div>
+            <div class="km-claims">
+              <div class="km-item">
+                <span class="mono-num accent">CLAIM 01</span>
+                <p><strong>“Opera con ventaja estadística, no con emociones.”</strong> — Titular principal orientado a disciplina y método.</p>
+              </div>
+              <div class="km-item">
+                <span class="mono-num accent">CLAIM 02</span>
+                <p><strong>“Sin cajas negras ni promesas irreales: solo riesgo medible.”</strong> — Posicionamiento frente a la competencia.</p>
+              </div>
+              <div class="km-item">
+                <span class="mono-num accent">CLAIM 03</span>
+                <p><strong>“Primero protege el capital; el interés compuesto hace el resto.”</strong> — Mensaje rector de educación financiera.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIOS -->
         <div class="brand-block" style="margin-bottom: 0;">
-          <h3 class="brand-block-title"><span class="mono-num accent">05 //</span> Respaldo de Nuestra Comunidad</h3>
+          <h3 class="brand-block-title"><span class="mono-num accent">COMUNIDAD //</span> Reseñas Verificadas</h3>
           <div class="testimonials-grid">
             <div class="testimonial-card">
               <div class="stars">
@@ -637,7 +800,7 @@
     <section class="section contact-section" id="contacto">
       <div class="container contact-grid">
         <div class="contact-info">
-          <span class="section-tag">SOPORTE & LICENCIAS INSTITUCIONALES</span>
+          <span class="section-tag">SOPORTE &amp; LICENCIAS INSTITUCIONALES</span>
           <h2>¿Necesitas un desarrollo <span class="accent">a medida</span>?</h2>
           <p>Nuestro equipo de ingeniería cuantitativa asesora desde traders minoristas hasta mesas privadas que buscan automatizar estrategias en Python, Pine Script o MQL5.</p>
 
@@ -660,7 +823,7 @@
               <i class="fa-solid fa-location-dot"></i>
               <div>
                 <span>Operaciones</span>
-                <strong>León, Gto. & CDMX · Cobertura Global</strong>
+                <strong>León, Gto. &amp; CDMX · Cobertura Global</strong>
               </div>
             </div>
           </div>
@@ -729,7 +892,7 @@
           <a href="#garantias">Garantías</a>
           <a href="#catalogo">Catálogo Completo</a>
           <a href="#simulador">Simulador de Riesgo</a>
-          <a href="#marca">Brand Book</a>
+          <a href="#marca">Brand Book (16)</a>
         </div>
 
         <div class="footer-col">
@@ -756,17 +919,15 @@
 
       <div class="footer-bottom">
         <span>&copy; 2026 AXION QUANT Labs. Todos los derechos reservados.</span>
-        <span class="mono-num">BUILD v4.3.0 // BRAND BOOK EDITION</span>
+        <span class="mono-num">BUILD v4.4.0 // BRAND BOOK 16-POINT EDITION</span>
       </div>
     </div>
   </footer>
 
   <!-- ================= OVERLAYS Y MODALES ================= -->
 
-  <!-- Backdrop general -->
   <div class="overlay hidden" id="overlay"></div>
 
-  <!-- CARRITO LATERAL (DRAWER) -->
   <aside class="cart-drawer" id="cart-drawer" aria-label="Carrito de compras">
     <div class="cart-header">
       <h3><i class="fa-solid fa-bag-shopping"></i> Tu Carrito</h3>
@@ -775,9 +936,7 @@
       </button>
     </div>
 
-    <div class="cart-items" id="cart-items">
-      <!-- Renderizado por app.js -->
-    </div>
+    <div class="cart-items" id="cart-items"></div>
 
     <div class="cart-footer">
       <div class="coupon-box">
@@ -807,19 +966,15 @@
     </div>
   </aside>
 
-  <!-- MODAL VISTA RÁPIDA DE PRODUCTO -->
   <div class="modal hidden" id="product-modal" role="dialog" aria-modal="true">
     <div class="modal-card product-modal-card">
       <button class="icon-close modal-close" id="close-product-modal" aria-label="Cerrar detalle">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <div class="modal-product-content" id="modal-product-content">
-        <!-- Inyectado por app.js -->
-      </div>
+      <div class="modal-product-content" id="modal-product-content"></div>
     </div>
   </div>
 
-  <!-- MODAL CHECKOUT SIMULADO -->
   <div class="modal hidden" id="checkout-modal" role="dialog" aria-modal="true">
     <div class="modal-card checkout-modal-card">
       <button class="icon-close modal-close" id="close-checkout-modal" aria-label="Cerrar checkout">
@@ -878,10 +1033,8 @@
     </div>
   </div>
 
-  <!-- NOTIFICACIONES TOAST -->
   <div class="toast-container" id="toast-container"></div>
 
-  <!-- SCRIPTS MODULARES -->
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
