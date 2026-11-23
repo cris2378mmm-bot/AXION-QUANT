@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AXION QUANT | Trading Algorítmico & Research Cuantitativo</title>
+  <meta name="description" content="Herramientas algorítmicas, indicadores institucionales, salas de trading en vivo y formación cuantitativa." />
+
+  <!-- Tipografías Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Iconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Hoja de estilos modular -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- 1. TICKER DE MERCADOS EN VIVO -->
+  <div class="market-ticker" aria-label="Cotizaciones de mercado">
+    <div class="ticker-track" id="ticker-track">
+      <!-- Renderizado dinámicamente por app.js -->
+    </div>
+  </div>
+
+  <!-- 2. BARRA DE NAVEGACIÓN -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#inicio" class="brand-logo">
+        <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="36" height="36" rx="8" stroke="#10B981" stroke-width="2" fill="#121622"/>
+          <path d="M10 28L18.5 11L23 20.5L26.5 15.5L31 28" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 23H24" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="31" cy="11" r="2.5" fill="#10B981"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">AXION<span class="accent">QUANT</span></span>
+          <span class="brand-sub">ALGORITHMIC DESK</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#marca">Manifiesto</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="market-status" title="Servidores de ejecución en línea">
+          <span class="pulse-dot"></span>
+          <span class="status-text">DESK LIVE</span>
+        </div>
+
+        <button class="cart-btn" id="open-cart-btn" aria-label="Abrir carrito de compras">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menú móvil">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 3. HERO SECTION -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-terminal"></i>
+            <span>Infraestructura Cuantitativa v4.2 Disponible</span>
+          </div>
+
+          <h1>
+            Opera con <span class="text-gradient">ventaja estadística</span>, no con emociones.
+          </h1>
+
+          <p class="hero-description">
+            Desarrollamos algoritmos propietarios, indicadores de flujo institucional y modelos de gestión de riesgo diseñados para traders que tratan el mercado como una ciencia exacta.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#catalogo" class="btn btn-primary">
+              Explorar Soluciones <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#simulador" class="btn btn-outline">
+              <i class="fa-solid fa-chart-line"></i> Probar Simulador
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-item">
+              <span class="mono-num">14,200+</span>
+              <span class="trust-label">Licencias Activas</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="mono-num">2.41</span>
+              <span class="trust-label">Sharpe Ratio Prom.</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="mono-num">99.98%</span>
+              <span class="trust-label">Uptime Servidores</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel Derecho: Terminal Simulada -->
+        <div class="hero-terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">AXION_CORE // PORTFOLIO_MONITOR.EXE</span>
+            <span class="terminal-tag">LIVE FEED</span>
+          </div>
+
+          <div class="terminal-body">
+            <div class="terminal-top-row">
+              <div>
+                <span class="term-label">RENDIMIENTO MODELO ALPHA-7 (YTD)</span>
+                <div class="term-big-value">+42.86% <span class="badge-up"><i class="fa-solid fa-caret-up"></i> 1.84% hoy</span></div>
+              </div>
+              <div class="term-risk-pill">
+                <span>MAX DRAWDOWN</span>
+                <strong>-3.92%</strong>
+              </div>
+            </div>
+
+            <!-- Gráfica SVG decorativa de curva de capital -->
+            <div class="terminal-chart-box">
+              <svg viewBox="0 0 400 140" class="mini-equity-svg" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="equityGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 120 L35 112 L70 118 L105 95 L140 100 L175 76 L210 82 L245 55 L280 62 L315 38 L350 42 L400 15 L400 140 L0 140 Z" fill="url(#equityGrad)"/>
+                <path d="M0 120 L35 112 L70 118 L105 95 L140 100 L175 76 L210 82 L245 55 L280 62 L315 38 L350 42 L400 15" fill="none" stroke="#10B981" stroke-width="2.5"/>
+                <circle cx="400" cy="15" r="4" fill="#10B981"/>
+              </svg>
+            </div>
+
+            <div class="terminal-signals">
+              <div class="signal-row">
+                <span class="sig-asset">NVDA / USD</span>
+                <span class="sig-type long">LONG</span>
+                <span class="sig-metric">R:R 1:3.2</span>
+                <span class="sig-pnl positive">+$1,420.00</span>
+              </div>
+              <div class="signal-row">
+                <span class="sig-asset">USD / MXN</span>
+                <span class="sig-type short">SHORT</span>
+                <span class="sig-metric">R:R 1:2.5</span>
+                <span class="sig-pnl positive">+$685.50</span>
+              </div>
+              <div class="signal-row">
+                <span class="sig-asset">SPX500</span>
+                <span class="sig-type long">LONG</span>
+                <span class="sig-metric">ACTIVA</span>
+                <span class="sig-pnl neutral">+$310.20</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CATÁLOGO E-COMMERCE -->
+    <section class="section catalog-section" id="catalogo">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ECOSISTEMA & TIENDA</span>
+          <h2>Herramientas y Membresías <span class="accent">Cuantitativas</span></h2>
+          <p>Licencias perpetuas, bots automatizados, formación técnica y acceso directo a nuestra mesa de análisis.</p>
+        </div>
+
+        <!-- Barra de Filtros y Búsqueda -->
+        <div class="catalog-controls">
+          <div class="filter-tabs" id="filter-tabs">
+            <button class="filter-btn active" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="algoritmos">Algoritmos & Bots</button>
+            <button class="filter-btn" data-category="membresias">Membresías</button>
+            <button class="filter-btn" data-category="educacion">Formación</button>
+            <button class="filter-btn" data-category="herramientas">Indicadores & Guías</button>
+          </div>
+
+          <div class="search-sort-group">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="search-input" placeholder="Buscar algoritmo, curso..." />
+            </div>
+            <select id="sort-select" class="sort-select" aria-label="Ordenar productos">
+              <option value="featured">Destacados</option>
+              <option value="price-asc">Precio: Menor a Mayor</option>
+              <option value="price-desc">Precio: Mayor a Menor</option>
+              <option value="rating">Mejor Calificados</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Grid de Productos -->
+        <div class="products-grid" id="products-grid">
+          <!-- Renderizado dinámicamente por app.js -->
+        </div>
+
+        <div class="empty-state hidden" id="empty-state">
+          <i class="fa-solid fa-radar"></i>
+          <h3>No se encontraron resultados</h3>
+          <p>Intenta con otro término o restablece los filtros del catálogo.</p>
+          <button class="btn btn-outline" id="reset-filters-btn">Ver todo el catálogo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SIMULADOR INTERACTIVO DE INTERÉS COMPUESTO Y RIESGO -->
+    <section class="section simulator-section" id="simulador">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">MOTOR DE PROYECCIÓN</span>
+          <h2>Calculadora de <span class="accent">Crecimiento y Riesgo</span></h2>
+          <p>Simula el impacto del interés compuesto y controla tu exposición máxima por operación antes de entrar al mercado.</p>
+        </div>
+
+        <div class="simulator-wrapper">
+          <div class="sim-controls">
+            <div class="input-group">
+              <div class="input-header">
+                <label for="sim-capital">Capital Inicial (USD)</label>
+                <span class="input-val mono-num" id="val-capital">$5,000</span>
+              </div>
+              <input type="range" id="sim-capital" min="500" max="50000" step="500" value="5000" />
+            </div>
+
+            <div class="input-group">
+              <div class="input-header">
+                <label for="sim-monthly">Aportación Mensual (USD)</label>
+                <span class="input-val mono-num" id="val-monthly">$300</span>
+              </div>
+              <input type="range" id="sim-monthly" min="0" max="5000" step="50" value="300" />
+            </div>
+
+            <div class="input-group">
+              <div class="input-header">
+                <label for="sim-rate">Rendimiento Mensual Esperado (%)</label>
+                <span class="input-val mono-num" id="val-rate">4.5%</span>
+              </div>
+              <input type="range" id="sim-rate" min="0.5" max="15" step="0.5" value="4.5" />
+            </div>
+
+            <div class="input-group">
+              <div class="input-header">
+                <label for="sim-months">Horizonte Temporal (Meses)</label>
+                <span class="input-val mono-num" id="val-months">24 meses</span>
+              </div>
+              <input type="range" id="sim-months" min="6" max="60" step="6" value="24" />
+            </div>
+
+            <div class="input-group">
+              <div class="input-header">
+                <label for="sim-risk">Riesgo Máximo por Trade (%)</label>
+                <span class="input-val mono-num risk-highlight" id="val-risk">1.0%</span>
+              </div>
+              <input type="range" id="sim-risk" min="0.25" max="5" step="0.25" value="1" />
+            </div>
+
+            <div class="sim-note">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Regla institucional: mantener el riesgo por operación debajo del <strong>1.5%</strong> protege tu cuenta ante rachas estadísticas negativas.</span>
+            </div>
+          </div>
+
+          <div class="sim-results">
+            <div class="sim-kpi-grid">
+              <div class="sim-kpi">
+                <span class="kpi-label">Capital Final Proyectado</span>
+                <strong class="kpi-value accent mono-num" id="res-final">$0</strong>
+              </div>
+              <div class="sim-kpi">
+                <span class="kpi-label">Ganancia Neta Generada</span>
+                <strong class="kpi-value mono-num" id="res-profit">$0</strong>
+              </div>
+              <div class="sim-kpi">
+                <span class="kpi-label">Riesgo Base / Operación</span>
+                <strong class="kpi-value gold mono-num" id="res-risk-usd">$0</strong>
+              </div>
+            </div>
+
+            <div class="chart-container">
+              <div class="chart-legend">
+                <span><i class="legend-dot emerald"></i> Curva de Capital Total</span>
+                <span><i class="legend-dot slate"></i> Capital Aportado</span>
+              </div>
+              <canvas id="growthChart" width="600" height="280"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. MANIFIESTO E IDENTIDAD DE MARCA -->
+    <section class="section brand-section" id="marca">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">FILOSOFÍA & BRANDING</span>
+          <h2>Por qué existe <span class="accent">AXION QUANT</span></h2>
+          <p>Nacimos para cerrar la brecha entre la ingeniería financiera de los fondos cuantitativos y el inversionista independiente.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+            <h3>Rigor Matemático</h3>
+            <p>Cada estrategia pasa por más de 10 años de <em>backtesting</em>, pruebas Monte Carlo y validación fuera de muestra antes de ver capital real.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3>Ejecución Sin Sesgos</h3>
+            <p>El miedo y la codicia destruyen cuentas rentables. Automatizamos la lectura de liquidez y las alertas para eliminar el error humano.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3>Transparencia Auditada</h3>
+            <p>Publicamos tanto los meses ganadores como los periodos de <em>drawdown</em>. No vendemos ilusiones, construimos consistencia verificable.</p>
+          </article>
+        </div>
+
+        <!-- Testimonios -->
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p>"El indicador Liquidity Pulse V4 me ahorró meses de análisis manual en futuros del Nasdaq. La documentación técnica está a otro nivel."</p>
+            <div class="author">
+              <div class="author-avatar">RM</div>
+              <div>
+                <strong>Rodrigo Méndez</strong>
+                <span>Trader de Futuros · CDMX</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p>"Por fin una comunidad donde hablan de esperanza matemática, varianza y riesgo real en lugar de presumir relojes rentados."</p>
+            <div class="author">
+              <div class="author-avatar">SL</div>
+              <div>
+                <strong>Sofía Lozano</strong>
+                <span>Analista de Portafolios · Monterrey</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p>"Empecé con la mentoría 1 a 1 y el bot Sentinel FX. Mi drawdown bajó de 14% a menos de 4% en dos trimestres."</p>
+            <div class="author">
+              <div class="author-avatar">DG</div>
+              <div>
+                <strong>Diego Garza</strong>
+                <span>Inversionista Independiente · Guadalajara</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACTO -->
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="section-tag">SOPORTE & LICENCIAS INSTITUCIONALES</span>
+          <h2>¿Necesitas un desarrollo <span class="accent">a medida</span>?</h2>
+          <p>Nuestro equipo de ingeniería cuantitativa asesora desde traders minoristas hasta mesas privadas que buscan automatizar estrategias en Python, Pine Script o MQL5.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span>Correo Corporativo</span>
+                <strong>desk@axionquant.io</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <span>Horario de Mesa</span>
+                <strong>Lun - Vie · 07:00 a 18:00 CST (Sesión NY)</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span>Operaciones</span>
+                <strong>León, Gto. & CDMX · Cobertura Global</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="promo-banner">
+            <i class="fa-solid fa-ticket"></i>
+            <span>Usa el código <strong class="mono-num">AXION10</strong> en tu carrito para obtener <strong>10% de descuento</strong> en tu primera orden.</span>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="c-name">Nombre Completo</label>
+              <input type="text" id="c-name" required placeholder="Ej. Alejandro Ríos" />
+            </div>
+            <div class="form-field">
+              <label for="c-email">Correo Electrónico</label>
+              <input type="email" id="c-email" required placeholder="nombre@correo.com" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="c-topic">Motivo de Consulta</label>
+            <select id="c-topic">
+              <option value="soporte">Duda sobre licencias o algoritmos</option>
+              <option value="mentoria">Agendar Mentoría 1 a 1</option>
+              <option value="custom">Desarrollo de Bot personalizado</option>
+              <option value="institucional">Alianza / Mesa Institucional</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="c-message">Mensaje</label>
+            <textarea id="c-message" rows="4" required placeholder="Cuéntanos qué mercados operas o qué herramienta buscas..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary full-width">
+            Enviar Solicitud <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-name">AXION<span class="accent">QUANT</span></span>
+          </div>
+          <p>Tecnología de análisis cuantitativo, algoritmos propietarios y educación financiera de precisión.</p>
+          <div class="social-links">
+            <a href="#inicio" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#inicio" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#inicio" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+            <a href="#inicio" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <a href="#inicio">Terminal</a>
+          <a href="#catalogo">Catálogo Completo</a>
+          <a href="#simulador">Simulador de Riesgo</a>
+          <a href="#marca">Filosofía Quant</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Soluciones</h4>
+          <a href="#catalogo">Bots Algorítmicos</a>
+          <a href="#catalogo">Indicadores TradingView</a>
+          <a href="#catalogo">Sala de Trading Live</a>
+          <a href="#catalogo">Guías Cuantitativas</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Boletín Semanal</h4>
+          <p class="footer-news-text">Recibe el reporte macroeconómico y niveles clave cada domingo.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" id="newsletter-email" required placeholder="tu@email.com" />
+            <button type="submit" aria-label="Suscribirse"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <p><strong>Aviso de Riesgo:</strong> La operación en mercados financieros (acciones, divisas, futuros y activos digitales) conlleva un nivel elevado de riesgo y puede no ser adecuada para todos los inversionistas. Los resultados pasados y simulaciones de <em>backtesting</em> no garantizan rendimientos futuros. Todo el software y material de AXION QUANT tiene fines analíticos y educativos.</p>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 AXION QUANT Labs. Todos los derechos reservados.</span>
+        <span class="mono-num">BUILD v4.2.0 // GITHUB PAGES</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= OVERLAYS Y MODALES ================= -->
+
+  <!-- Backdrop general -->
+  <div class="overlay hidden" id="overlay"></div>
+
+  <!-- CARRITO LATERAL (DRAWER) -->
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrito de compras">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> Tu Carrito</h3>
+      <button class="icon-close" id="close-cart-btn" aria-label="Cerrar carrito">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-items" id="cart-items">
+      <!-- Renderizado por app.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="coupon-box">
+        <input type="text" id="coupon-input" placeholder="Código (ej. AXION10)" />
+        <button class="btn btn-outline btn-sm" id="apply-coupon-btn">Aplicar</button>
+      </div>
+      <div class="coupon-feedback" id="coupon-feedback"></div>
+
+      <div class="cart-totals">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span class="mono-num" id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="total-row discount-row hidden" id="discount-row">
+          <span>Descuento (10%)</span>
+          <span class="mono-num accent" id="cart-discount">-$0.00</span>
+        </div>
+        <div class="total-row grand-total">
+          <span>Total (USD)</span>
+          <span class="mono-num" id="cart-total">$0.00</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary full-width" id="checkout-btn">
+        Finalizar Compra <i class="fa-solid fa-lock"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- MODAL VISTA RÁPIDA DE PRODUCTO -->
+  <div class="modal hidden" id="product-modal" role="dialog" aria-modal="true">
+    <div class="modal-card product-modal-card">
+      <button class="icon-close modal-close" id="close-product-modal" aria-label="Cerrar detalle">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-product-content" id="modal-product-content">
+        <!-- Inyectado por app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CHECKOUT SIMULADO -->
+  <div class="modal hidden" id="checkout-modal" role="dialog" aria-modal="true">
+    <div class="modal-card checkout-modal-card">
+      <button class="icon-close modal-close" id="close-checkout-modal" aria-label="Cerrar checkout">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="checkout-form-view">
+        <div class="checkout-header">
+          <span class="section-tag">CHECKOUT CIFRADO 256-BIT</span>
+          <h3>Confirmar Pedido</h3>
+        </div>
+
+        <form id="checkout-form">
+          <div class="form-field">
+            <label for="pay-name">Titular de la Licencia</label>
+            <input type="text" id="pay-name" required placeholder="Nombre completo" />
+          </div>
+          <div class="form-field">
+            <label for="pay-email">Correo de Entrega Digital</label>
+            <input type="email" id="pay-email" required placeholder="donde-recibes-tus-licencias@correo.com" />
+          </div>
+
+          <div class="payment-methods">
+            <label class="pay-option">
+              <input type="radio" name="pay-method" value="Tarjeta" checked />
+              <span><i class="fa-regular fa-credit-card"></i> Tarjeta</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="pay-method" value="SPEI / Transferencia" />
+              <span><i class="fa-solid fa-building-columns"></i> SPEI</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="pay-method" value="USDT / Crypto" />
+              <span><i class="fa-brands fa-bitcoin"></i> Crypto</span>
+            </label>
+          </div>
+
+          <div class="checkout-summary-box">
+            <span>Total a pagar:</span>
+            <strong class="mono-num accent" id="checkout-total-display">$0.00 USD</strong>
+          </div>
+
+          <button type="submit" class="btn btn-primary full-width">
+            Confirmar y Generar Licencias <i class="fa-solid fa-check-double"></i>
+          </button>
+        </form>
+      </div>
+
+      <div id="checkout-success-view" class="checkout-success hidden">
+        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>¡Orden Confirmada!</h3>
+        <p>Hemos enviado tus credenciales y enlaces de descarga al correo registrado.</p>
+        <div class="receipt-box" id="receipt-box"></div>
+        <button class="btn btn-primary full-width" id="finish-order-btn">Volver a la Tienda</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIFICACIONES TOAST -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- SCRIPTS MODULARES -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
